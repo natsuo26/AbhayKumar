@@ -30,53 +30,51 @@ export class App {
   ) {
     this.matIconRegistry.addSvgIcon(
       'github',
-      this.domSanitizer.bypassSecurityTrustResourceUrl(
-        './browser/GitHub_Invertocat_Black_Clearspace.svg',
-      ),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./GitHub_Invertocat_Black_Clearspace.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'angular',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/angular.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./angular.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'c#',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/cSharp.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./cSharp.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'c++',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/c++.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./c++.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'docker',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/docker.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./docker.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'Git',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/Git.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./Git.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'net-frakework',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/net-framework.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./net-framework.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'python',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/python.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./python.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'signalr',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/signalr.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./signalr.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'tensorflow',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/tensorflow.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./tensorflow.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'typescript',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/typescript.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./typescript.svg'),
     );
     this.matIconRegistry.addSvgIcon(
       'linkedin',
-      this.domSanitizer.bypassSecurityTrustResourceUrl('./browser/LinkedIn.svg'),
+      this.domSanitizer.bypassSecurityTrustResourceUrl('./LinkedIn.svg'),
     );
     effect(() => {
       const section = this.activeSection();
