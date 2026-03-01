@@ -1,0 +1,65 @@
+@use '../../../../styles/variables' as *;
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: $lavender-color;
+  max-width: 300px;
+  margin-top: 20px;
+  h2 {
+    color: $secondary-text-color;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  .profile-details {
+    display: flex;
+    text-align: center;
+    justify-self: center;
+    align-items: center;
+    margin-top: 10px;
+    color: $secondary-text-color;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    max-width: 280px;
+    padding: 15px;
+    margin-top: 15px;
+
+    .profile-image {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    max-width: 260px;
+    padding: 12px;
+    margin-top: 10px;
+
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    .profile-image {
+      width: 100px;
+      height: 100px;
+    }
+
+    .profile-details {
+      font-size: 0.9rem;
+    }
+  }
+}

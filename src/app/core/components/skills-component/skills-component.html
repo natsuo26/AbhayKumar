@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>Skills</h1>
+  <div class="skills">
+    @for (skill of skills; track skill.name) {
+      <app-skill-component [name]="skill.name" , [logo]="skill.logo"></app-skill-component>
+    }
+  </div>
+</div>

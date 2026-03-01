@@ -1,0 +1,27 @@
+@use '../styles/variables' as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-background-color;
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 74px;
+  }
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: $primary-sub-text-color;
+  margin: 1.5rem 0;
+  opacity: 0.3;
+  width: 100%;
+}

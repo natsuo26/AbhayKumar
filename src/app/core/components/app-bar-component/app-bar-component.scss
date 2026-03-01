@@ -1,0 +1,365 @@
+.app-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+
+  svg {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+    opacity: 0.5;
+  }
+}
+
+.app-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 70px;
+}
+
+.app-bar-brand {
+  .brand-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+
+    &:hover {
+      background: rgba(99, 102, 241, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .brand-icon {
+      width: 32px;
+      height: 32px;
+      color: #818cf8;
+      filter: drop-shadow(0 0 8px rgba(129, 140, 248, 0.5));
+      transition: all 0.3s ease;
+      border-radius: 25px;
+
+      .brand-link:hover & {
+        color: #a5b4fc;
+        filter: drop-shadow(0 0 12px rgba(129, 140, 248, 0.8));
+      }
+    }
+
+    .brand-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+  }
+}
+
+.app-bar-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+    color: #94a3b8;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .nav-icon {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      color: #e2e8f0;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.2);
+
+      &::before {
+        opacity: 1;
+      }
+
+      .nav-icon {
+        color: #818cf8;
+        transform: scale(1.1);
+      }
+    }
+
+    &.active {
+      color: #ffffff;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+
+      .nav-icon {
+        color: #a5b4fc;
+      }
+    }
+  }
+}
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(99, 102, 241, 0.1);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(99, 102, 241, 0.2);
+    transform: scale(1.05);
+  }
+
+  span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #818cf8;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    margin: 3px 0;
+
+    &:nth-child(1) {
+      width: 16px;
+    }
+
+    &:nth-child(3) {
+      width: 16px;
+    }
+  }
+
+  &.active {
+    span {
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+        width: 20px;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+      }
+
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+        width: 20px;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.98) 100%);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+
+  &.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-nav-link {
+    display: block;
+    padding: 1rem 2rem;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+
+    &:hover {
+      color: #e2e8f0;
+      background: rgba(99, 102, 241, 0.1);
+      border-left-color: #818cf8;
+      padding-left: 2.5rem;
+    }
+
+    &.active {
+      color: #ffffff;
+      background: linear-gradient(90deg, rgba(99, 102, 241, 0.2) 0%, transparent 100%);
+      border-left-color: #a5b4fc;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+  .app-bar-container {
+    padding: 0 1.5rem;
+  }
+
+  .app-bar-menu {
+    gap: 0.25rem;
+
+    .nav-link {
+      padding: 0.625rem 1rem;
+      font-size: 0.9rem;
+
+      .nav-icon {
+        width: 18px;
+        height: 18px;
+      }
+
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .app-bar-container {
+    height: 64px;
+    padding: 0 1rem;
+  }
+
+  .app-bar-brand {
+    .brand-link {
+      padding: 0.5rem;
+
+      .brand-text {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .app-bar-menu {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-bar-container {
+    padding: 0 0.75rem;
+  }
+
+  .app-bar-brand {
+    .brand-link {
+      .brand-icon {
+        width: 28px;
+        height: 28px;
+      }
+
+      .brand-text {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+// Scroll effect
+.app-bar.scrolled {
+  background: rgba(15, 23, 42, 0.98);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+// Animation for nav links
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-bar-menu {
+  .nav-link {
+    animation: fadeInUp 0.5s ease forwards;
+
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+  }
+}

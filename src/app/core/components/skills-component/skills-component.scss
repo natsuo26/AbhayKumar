@@ -1,0 +1,76 @@
+@use '../../../../styles/variables' as *;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 50px;
+  h1 {
+    color: $primary-text-color;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    padding-top: 50px;
+  }
+  .skills {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    max-width: 550px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 15px;
+    h1 {
+      font-size: 2.25rem;
+    }
+    .skills {
+      max-width: 500px;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 12px;
+    margin-top: 30px;
+    h1 {
+      font-size: 2rem;
+      padding-top: 40px;
+    }
+    .skills {
+      max-width: 100%;
+      margin-top: 60px;
+      margin-bottom: 60px;
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    margin-top: 20px;
+    h1 {
+      font-size: 1.75rem;
+      padding-top: 30px;
+    }
+    .skills {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      gap: 12px;
+    }
+  }
+}

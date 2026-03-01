@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Experience</h1>
+  @for (experience of experiences; track experience.title) {
+    <app-experience-item-component
+      [experienceTitle]="experience.title"
+      [experienceCompany]="experience.company"
+      [experienceDuration]="experience.duration"
+      [experienceDescription]="experience.description"
+      [experienceTechnologies]="experience.technologies"
+    ></app-experience-item-component>
+  }
+</div>

@@ -1,0 +1,15 @@
+<div class="experience-item">
+  <div class="experience-header">
+    <h2>{{ experienceTitle() }}</h2>
+    <h3>{{ experienceCompany() }}</h3>
+    <p class="duration">{{ experienceDuration() }}</p>
+  </div>
+  <div class="experience-description">
+    <p>{{ experienceDescription() }}</p>
+  </div>
+  <div class="experience-technologies">
+    @for (tech of experienceTechnologies(); track tech) {
+      <span class="tech-tag">{{ tech }}</span>
+    }
+  </div>
+</div>

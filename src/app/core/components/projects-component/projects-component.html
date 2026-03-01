@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Projects</h1>
+  @for (project of projects; track project.title) {
+    <app-project-component
+      [projectTitle]="project.title"
+      [projectDescription]="project.description"
+      [projectLink]="project.link"
+    ></app-project-component>
+  }
+</div>

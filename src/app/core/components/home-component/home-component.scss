@@ -1,0 +1,52 @@
+@use '../../../../styles/variables' as *;
+.container {
+  margin-top: $app-bar-height;
+  height: calc(100vh - $app-bar-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  color: $primary-text-color;
+  padding: 20px;
+  .message {
+    font-size: 2rem;
+    font-weight: 500;
+    width: 500px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    gap: 2em;
+    .message {
+      font-size: 1.75rem;
+      width: 450px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 15px;
+    .message {
+      font-size: 1.5rem;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 1em;
+    padding: 10px;
+    .message {
+      font-size: 1.25rem;
+      max-width: 100%;
+    }
+  }
+}
