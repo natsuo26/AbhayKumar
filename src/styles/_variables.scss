@@ -1,19 +1,46 @@
-$primary-background-color: #080931;
-$primary-text-color: #ffffff;
-$secondary-text-color: #000000;
-$primary-sub-text-color: #333333;
-$blue-color: #8caaee;
-$teal-color: #00ffff;
-$red-color: #e78284;
-$orange-color: #ff9900;
-$yellow-color: #e5c890;
-$sky-color: #99d1db;
-$overlay-color: #949cbb;
-$base-color: #424342;
-$lavender-color: #7287fd;
-$light-theme-red: #e78284;
-$neptune-color: #a5b4fc;
-$bronze-color: #d58936;
-$white-color: #ffffff;
-$black-color: #000000;
+// ========================================
+// 70:30:10 UX Design Color Rule
+// ========================================
+// 70% - Dominant/Neutral Colors (backgrounds, base text)
+// 30% - Secondary Colors (UI elements, cards, borders)
+// 10% - Accent Colors (CTAs, highlights, important elements)
+
+// ========================================
+// 70% - DOMINANT COLORS (Neutral/Background)
+// ========================================
+$primary-background-color: #0f172a; // Dark slate - main background
+$primary-text-color: #f1f5f9; // Light gray - primary text on dark
+$secondary-text-color: #e2e8f0; // Off-white - secondary text
+$primary-sub-text-color: #94a3b8; // Medium gray - subtle text
+$base-color: #64748b; // Slate gray - body text and descriptions
+$white-color: #ffffff; // Pure white - highlights
+$black-color: #000000; // Pure black - shadows and borders
+
+// ========================================
+// 30% - SECONDARY COLORS (UI Elements/Cards)
+// ========================================
+$card-background-color: #1e293b; // Lighter slate - cards and sections
+$border-color: #334155; // Slate - borders and dividers
+$overlay-color: #475569; // Interactive elements and overlays
+$lavender-color: #1e293b; // Card background (updated for consistency)
+$sky-color: #64748b; // Secondary UI elements
+
+// ========================================
+// 10% - ACCENT COLORS (CTAs/Highlights)
+// ========================================
+$primary-accent-color: #6366f1; // Indigo - primary CTAs and links
+$secondary-accent-color: #a855f7; // Purple - gradients and special elements
+$tertiary-accent-color: #06b6d4; // Muted cyan - hover states and active elements
+$blue-color: #6366f1; // Links and interactive elements
+$teal-color: #0d9488; // Muted teal - tech tags and badges (reduced brightness)
+$red-color: #ef4444; // Errors and warnings
+$orange-color: #f97316; // Secondary highlights
+$yellow-color: #eab308; // Tertiary highlights
+$neptune-color: #a855f7; // Purple accents
+$bronze-color: #f59e0b; // Amber accents
+$light-theme-red: #ef4444; // Light theme red
+
+// ========================================
+// LAYOUT VARIABLES
+// ========================================
 $app-bar-height: 70px;
