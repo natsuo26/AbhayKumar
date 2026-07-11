@@ -1,7 +1,8 @@
 export interface Experience {
   title: string;
   company: string;
-  duration: string;
+  start: Date;
+  end?: Date | undefined | null;
   description: string;
   technologies: string[];
 }
